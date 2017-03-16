@@ -1,0 +1,32 @@
+# All the various editor generated files we don't want in here
+.DS_Store
+.idea
+.ropeproject*
+.settings
+
+*.egg-info/
+*.iml
+*.project
+*.pyc
+*.pydevproject
+*.swp
+*.deb
+*~
+*#
+
+# AWS Lambda output
+backend/lambda/*/*.zip
+
+# Test output files / cache
+htmlcov/
+frontend/mysandbox/test/**/*.js
+.cache/
+.coverage
+.coverage.*
+.tox
+coverage.xml
+junit*.xml
+debugging/
+
+# NPM artifacts
+**/node_modules/**

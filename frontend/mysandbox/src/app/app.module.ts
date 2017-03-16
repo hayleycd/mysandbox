@@ -5,8 +5,10 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { BubbleChart } from './bubblechart.component';
-import { Dashboard } from './dashboard.component';
+import { BubbleChart } from './bubblechart/bubblechart.component';
+import { Dashboard } from './dashboard/dashboard.component';
+
+import { DataService } from './dataservice/dataservice.service';
 
 
 const appRoutes: Routes = [
@@ -30,7 +32,9 @@ const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

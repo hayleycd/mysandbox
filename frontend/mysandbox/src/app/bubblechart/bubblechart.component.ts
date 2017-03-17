@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { DataService } from '../dataservice/dataservice.service';
@@ -10,17 +10,17 @@ import { MyUser, Activity, UserActivity } from '../dataservice/mydatatypes';
 })
 export class BubbleChart  {
 
-  users: MyUser[];
-  activities: Activity[];
-  userActivities: UserActivity[];
+  @Input() public users: Promise<MyUser[]>;
+  @Input() public activities: Promise<Activity[]>;
+  @Input() public userActivities: Promise<UserActivity[]>;
 
   constructor(private dataService: DataService,
               private router: Router){
   };
 
   ngOnInit() {
-    this.users = this.dataService.getUsers();
-    this.activities = this.dataService.getActivityTypes();
-    this.userActivities = this.dataService.getUserActivities();
+    this.dataService.getUsers().then(response => this.users = response.json().data);
+    this.dataService.getActivityTypes().then(response => this.activities = response.json().data);
+    this.dataService.getUserActivities().then(response => this.userActivities = response.json().data);
   }
 };

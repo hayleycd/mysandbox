@@ -6,6 +6,7 @@ import { RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BubbleChart } from './bubblechart/bubblechart.component';
+import { ParentBubbleChart } from './bubblechart/parentbubblechart.component';
 import { Dashboard } from './dashboard/dashboard.component';
 
 import { DataService } from './dataservice/dataservice.service';
@@ -13,7 +14,7 @@ import { DataService } from './dataservice/dataservice.service';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: Dashboard },
-  { path: 'bubblechart', component: BubbleChart},
+  { path: 'bubblechart', component: ParentBubbleChart},
   { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   { path: '**', redirectTo: 'dashboard', pathMatch: 'full' }
 ];
@@ -22,6 +23,7 @@ const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
 
 @NgModule({
   declarations: [
+    ParentBubbleChart,
     AppComponent,
     Dashboard,
     BubbleChart

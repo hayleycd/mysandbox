@@ -1,0 +1,39 @@
+{
+"data":[
+  {
+    "id": 1,
+    "first": "Hayley",
+    "last" : "D"
+  },
+
+  {
+    "id": 2,
+    "first": "Micah",
+    "last" : "D"
+  },
+
+  {
+    "id": 3,
+    "first": "Gandhi",
+    "last" : "J"
+  },
+
+  {
+    "id": 4,
+    "first": "Beibei",
+    "last" : "Z"
+  },
+
+  {
+    "id": 5,
+    "first": "Justin",
+    "last" : "S"
+  },
+
+  {
+    "id": 6,
+    "first": "Alex",
+    "last" : "S"
+  }
+]
+}
